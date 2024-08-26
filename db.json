@@ -1,0 +1,49 @@
+{
+  "user": [
+    {
+      "name": "Jhustyn",
+      "lastname": "Carvajal",
+      "birthdate": "09-03-2002",
+      "hobbies": [
+        {
+          "name": "Reading",
+          "description": "Reading books to improve my vocabulary"
+        },
+        {
+          "name": "Gardening",
+          "description": "Gardening to enjoy nature and relax"
+        }
+      ]
+    },
+    {
+      "name": "Eduardo",
+      "lastname": "Garcia",
+      "birthdate": "11-12-1996",
+      "hobbies": [
+        {
+          "name": "Cooking",
+          "description": "Cooking to prepare delicious meals for my family"
+        },
+        {
+          "name": "Painting",
+          "description": "Painting to express my creativity and emotions"
+        }
+      ]
+    },
+    {
+      "name": "Andres",
+      "lastname": "Mendez",
+      "birthdate": "05-25-1990",
+      "hobbies": [
+        {
+          "name": "Running",
+          "description": "Running to improve my endurance and get in shape"
+        },
+        {
+          "name": "Swimming",
+          "description": "Swimming to enjoy the water and relax"
+        }
+      ]
+    }
+  ]
+}

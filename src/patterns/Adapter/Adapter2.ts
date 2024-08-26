@@ -41,7 +41,7 @@ export class FileAdapterSingleton implements IInputFile {
 
   public readFile(path: string): Person[] | null {
     try {
-      const data = this.inputFile?.readFile(path);
+      const data = this.inputFile.readFile(path);
       return data;
     } catch (err) {
       console.log(`Error: ${err}`);
@@ -57,13 +57,13 @@ export class FileAdapterSingleton implements IInputFile {
   }
 }
 
-export class TxtPersonReaderAdapter implements IInputFile {
-  private static instance: TxtPersonReaderAdapter;
+export class TxtPersonReaderAdapterSingleton implements IInputFile {
+  private static instance: TxtPersonReaderAdapterSingleton;
   private constructor() {}
 
-  public static getInstance(): TxtPersonReaderAdapter {
+  public static getInstance(): TxtPersonReaderAdapterSingleton {
     if (!this.instance) {
-      this.instance = new TxtPersonReaderAdapter();
+      this.instance = new TxtPersonReaderAdapterSingleton();
     }
     return this.instance;
   }
@@ -138,8 +138,8 @@ export class JsonPersonReaderAdapter implements IInputFile {
 
 //Se puede utilizar el pratron factory para escoger el tipo de adaper que necesitamos
 
-// const jsonPathFile = "data.csv";
-// const fileAdapter = FileAdapterSingleton.getInstace();
-// fileAdapter.toggleInputFile(CsvPersonReaderAdapter.getInstance());
-// const persons = fileAdapter.readFile(jsonPathFile);
-// console.table(persons);
+const jsonPathFile = "data.csv";
+const fileAdapter = FileAdapterSingleton.getInstace();
+fileAdapter.toggleInputFile(CsvPersonReaderAdapter.getInstance());
+const persons = fileAdapter.readFile(jsonPathFile);
+console.table(persons);
